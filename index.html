@@ -1,11 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Admission Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Admission Form</h2>
+      <form action="submit_admission.php" method="post">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" required />
+
+        <label for="course">Select Course:</label>
+        <select id="course" name="course" required>
+          <option value="">Select</option>
+          <option value="Computer Science">Computer Science</option>
+          <option value="Engineering">Engineering</option>
+          <option value="Business Administration">
+            Business Administration
+          </option>
+          <option value="Medicine">Medicine</option>
+        </select>
+        <div class="lower-div">
+          <label for="message">Additional Information:</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
+    </div>
+  </body>
 </html>
